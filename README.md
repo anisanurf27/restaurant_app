@@ -1,104 +1,51 @@
-# Aresto ( Aslan- Restaurant )
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-## Table of Contents 🔥
+<p align="center">
+<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+</p>
 
-<div class="">
+## About Laravel
 
-<ol>
-<a href="#screenshoot">💠 Features 💻</a>
-</ol>
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-<ol>
-<a href="#screenshoot">💠 Screenshoot 💻</a>
-</ol>
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-<ol>
-<a href="#database">💠 Database Designs 📚</a>
-</ol>
+Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
 
-<ol>
-<a href="#analysis">💠 system analysis and design 📂</a>
-</ol>
-</div>
+## Learning Laravel
 
+Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
 
-<hr>
+If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
-<div class="" id="features">
-## 💠 features
+## Laravel Sponsors
 
-- API Documentation using swagger
+We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
 
-</div>
+- **[Vehikl](http://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[British Software Development](https://www.britishsoftware.co)**
+- **[Styde](https://styde.net)**
+- [Fragrantica](https://www.fragrantica.com)
+- [SOFTonSOFA](https://softonsofa.com/)
 
-<hr>
+## Contributing
 
-<div class="" id="screenshoot">
-## 💠 Screnshoot
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
 
-![ss1](https://user-images.githubusercontent.com/116990574/235449384-26185aac-0fbc-474b-95a5-65a90b6104c1.png)
+## Security Vulnerabilities
 
-![ss2](https://user-images.githubusercontent.com/116990574/235449429-c0158d70-e295-4637-8ffa-808dde9257d7.png)
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
-![ss3](https://user-images.githubusercontent.com/116990574/235449434-838a38ed-2704-4b5d-bd2c-9fd2b44802e5.png)
+## License
 
-![ss4](https://user-images.githubusercontent.com/116990574/235449437-02317b69-c36b-4e24-897b-7f6aac6928ad.png)
-
-![ss5](https://user-images.githubusercontent.com/116990574/235449449-d8cdc6a2-3ef3-4bf6-a8e6-a067b8b63770.png)
-
-![ss6](https://user-images.githubusercontent.com/116990574/235449462-30ebfc31-10fc-4c97-b6e4-2c695b552b32.png)
-
-![ss7](https://user-images.githubusercontent.com/116990574/235449482-e8e0c4a7-1e9f-40f5-9cc1-5b5074166a8e.png)
-
-
-<img width="954" alt="api-doc-aresto" src="https://github.com/aslan-asilon31/aresto_laravel10_spatie/assets/116990574/3a45d63e-ae2e-4eb1-806e-6e9e56195138">
-
-
-</div>
-
-<div class="" id="database">
-## 💠 Database designs
-
-![aresto_db](https://github.com/aslan-asilon31/aresto_laravel10_spatie/assets/116990574/02075ff1-8730-4df3-9cf6-d2e216e0acda)
-
-</div>
-
-<div class="" id="analysis">
-## 💠 System analysis and design
-
-![description tables](https://user-images.githubusercontent.com/116990574/235449515-6aa5b782-1040-4e44-bfdd-e49ad1d62fd1.png)
-
-![table_home](https://user-images.githubusercontent.com/116990574/235449671-8a07adc6-169d-47bf-bad4-33a39cd28d27.png)
-
-![table_about](https://user-images.githubusercontent.com/116990574/235449609-d4615931-eff2-40c7-aebb-b19e2b5e8769.png)
-
-![table_booking](https://user-images.githubusercontent.com/116990574/235449871-9eecb37b-6d96-4638-a4a0-33fecd46ac15.png)
-
-![table_customer](https://user-images.githubusercontent.com/116990574/235449882-ad1e3971-4ca4-4b0e-ac12-994eb72ebaf5.png)
-
-![table_employee](https://user-images.githubusercontent.com/116990574/235449891-4c2ff19e-900c-43da-a91a-cce2380f1a5a.png)
-
-![table_menu](https://user-images.githubusercontent.com/116990574/235449903-afbfe46d-94b4-4178-b195-d4be23053053.png)
-
-![table_menu_item](https://user-images.githubusercontent.com/116990574/235449925-b49b45e1-b6a2-452f-b0cf-92c9bbedaf78.png)
-
-![table_our_team](https://user-images.githubusercontent.com/116990574/235449957-902782f9-aef7-4522-8a20-7bee2c53078f.png)
-
-![table_reservation](https://user-images.githubusercontent.com/116990574/235449968-57f73710-9fb6-4c4f-baa3-82e576fe0f81.png)
-
-![table_service](https://user-images.githubusercontent.com/116990574/235449976-c35e0ce5-6d32-4655-90bb-c829a606280a.png)
-
-![table_supplier_order](https://user-images.githubusercontent.com/116990574/235449987-b8fbcd54-bf46-4cac-8d36-ce3bf0f2f937.png)
-
-![table_table](https://user-images.githubusercontent.com/116990574/235450020-7f0ff4d6-4061-4b5f-a7fb-110be204c11f.png)
-
-![table_testimonial](https://user-images.githubusercontent.com/116990574/235450117-3c64af8e-f3cf-416e-acd3-2b6461c3e152.png)
-
-
-</div>
-
-
-
-
-
-
+The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
