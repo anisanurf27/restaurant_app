@@ -51,6 +51,10 @@
     <script src="{{ asset('frontend/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
     <script src="{{ asset('frontend/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
     <!-- Template Javascript -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
 </body>
