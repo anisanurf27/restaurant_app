@@ -521,17 +521,13 @@
 
 
     <!-- Reservation Start -->
-    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation">
-        <div class="row g-0">
-            <div class="col-md-6">
-                <div class="video">
-                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
-                        <span></span>
-                    </button>
-                </div>
+    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation" style="height: 100vh;">
+        <div class="row g-0" style="height: 100%;">
+            <div class="col-md-6 d-flex flex-column" style="height: 100%;">
+                <img class="img-fluid" src="{{ asset('')}}frontend/img/book_table.jpg" alt="" style="object-fit: cover; height: 100%; flex-grow: 1;">
             </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center">
-                <div class="p-5 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="col-md-6 bg-dark d-flex align-items-center" style="height: 100%;">
+                <div class="p-5 wow fadeInUp w-100" data-wow-delay="0.2s">
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                     <h1 class="text-white mb-4">Book A Table Online</h1>
                     <form>
@@ -557,12 +553,12 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <select class="form-select" id="select1">
-                                      <option value="1">People 1</option>
-                                      <option value="2">People 2</option>
-                                      <option value="3">People 3</option>
+                                        <option value="1">People 1</option>
+                                        <option value="2">People 2</option>
+                                        <option value="3">People 3</option>
                                     </select>
                                     <label for="select1">No Of People</label>
-                                  </div>
+                                </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
@@ -579,25 +575,7 @@
             </div>
         </div>
     </div>
-
-    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- 16:9 aspect ratio -->
-                    <div class="ratio ratio-16x9">
-                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
-                            allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Reservation Start -->
+    <!-- Reservation End -->
 
 
     <!-- Team Start -->
