@@ -156,7 +156,7 @@
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h5 class="section-title ff-secondary text-center text-primary fw-normal">Food Menu</h5>
-                <h1 class="mb-5">Most Popular Items</h1>
+                <h1 class="mb-5">Most Popular Menu</h1>
             </div>
             <div class="tab-class text-center wow fadeInUp" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-center border-bottom mb-5">
@@ -193,97 +193,105 @@
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-1.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Classic Breakfast Platter.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Classic Eggs Benedict ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Classic Breakfast Platter ( 10% OFF )</span>
+                                            <span class="text-primary">200k</span> 
                                         </h5>
-                                        <small class="fst-italic"> Indulge in a timeless breakfast favorite with our Classic Eggs Benedict. Perfectly poached eggs nestled on a bed of Canadian bacon and toasted English muffins, topped with velvety hollandaise sauce.</small>
+                                        <small class="fst-italic">Telur Dadar, Roti Panggang, Sosis atau Bacon, Kentang Goreng, Dan Pilihan Buah-Buahan Segar</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-2.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Pancake Stack.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Fluffy Blueberry Pancakes  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
-                                        </h5>
-                                        <small class="fst-italic">Experience breakfast bliss with our Fluffy Blueberry Pancakes. Each pancake is a delicate delight, bursting with juicy blueberries, served with a drizzle of maple syrup and a dollop of whipped cream.</small>
+                                            <span>Pancake Stack</span>
+                                            <span class="text-primary">125k</span>
+                                            </h5>
+                                        <small class="fst-italic">Tumpukan pancake lembut dengan pilihan topping seperti madu, maple syrup, atau buah-buahan.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-3.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Oatmeal Bowl.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Avocado Toast Delight  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Oatmeal Bowl</span>
+                                            <span class="text-primary">90k</span>
                                         </h5>
-                                        <small class="fst-italic"> Start your day on a healthy note with our Avocado Toast Delight. Creamy avocado slices on artisanal multigrain toast, adorned with a sprinkle of chili flakes, cherry tomatoes, and a hint of lime.</small>
+                                        <small class="fst-italic"> Bubur oat dengan pilihan topping seperti buah-buahan, kacang-kacangan, atau madu.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-4.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Avocado Toast.jpeg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Hearty Veggie Omelette  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Avocado Toast</span>
+                                            <span class="text-primary">125k</span>
                                         </h5>
-                                        <small class="fst-italic">Dive into a garden of flavors with our Hearty Veggie Omelette. Three eggs folded around a medley of sautéed bell peppers, onions, tomatoes, and spinach, served with a side of crispy hash browns.</small>
+                                        <small class="fst-italic">Roti gandum panggang dengan lapisan alpukat, telur mata sapi, dan taburan rempah.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-5.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Smoothie Bowl.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Smoked Salmon Bagel  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Smoothie Bowl</span>
+                                            <span class="text-primary">95k</span>
                                         </h5>
-                                        <small class="fst-italic">Elevate your morning with our Smoked Salmon Bagel. A toasted bagel piled high with silky smoked salmon, cream cheese, capers, and red onion rings, creating a symphony of savory and salty sensations.</small>
+                                        <small class="fst-italic">Smoothie dari campuran buah-buahan seperti pisang, mangga, dan beri, disajikan dalam mangkuk dengan topping granola, chia seed, dan irisan buah.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-6.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Yogurt Parfait.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Country-style Breakfast Burrito  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Yogurt Parfait  ( 50% OFF )</span>
+                                            <span class="text-primary">225k</span>
                                         </h5>
-                                        <small class="fst-italic">Savor a taste of the countryside with our Country-style Breakfast Burrito. Scrambled eggs, hearty sausage, black beans, cheese, and salsa wrapped in a warm tortilla, offering a satisfying and flavorful breakfast experience.</small>
+                                        <small class="fst-italic">Lapisan yogurt, granola, dan buah-buahan segar seperti beri, pisang, dan kiwi. Bisa juga ditambah dengan madu atau sirup maple untuk memberikan rasa manis alami.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-7.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/English Breakfast.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Greek Yogurt Parfait  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>English Breakfast</span>
+                                            <span class="text-primary">199k</span>
                                         </h5>
-                                        <small class="fst-italic">Embrace a lighter option with our Greek Yogurt Parfait. Layers of creamy Greek yogurt, granola, and fresh mixed berries, creating a refreshing and wholesome breakfast that's both delicious and nutritious.</small>
+                                        <small class="fst-italic">Sarapan lengkap ala Inggris yang terdiri dari telur (orak-arik atau mata sapi), sosis, bacon, jamur tumis, tomat panggang, kacang panggang, dan roti panggang.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-8.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Crispy Bacon and Cheese Waffles.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Crispy Bacon and Cheese Waffles ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Crispy Bacon and Cheese Waffles</span>
+                                            <span class="text-primary">105k</span>
                                         </h5>
-                                        <small class="fst-italic">Delight in the perfect marriage of sweet and savory with our Crispy Bacon and Cheese Waffles. Golden waffles studded with crispy bacon bits, melted cheese, and a drizzle of maple syrup, ensuring a breakfast full of indulgence.</small>
+                                        <small class="fst-italic">variasi waffle yang gurih dan lezat. Waffle ini dibuat dengan adonan yang diberi tambahan potongan bacon renyah dan keju, sehingga menghasilkan kombinasi rasa yang kaya dan tekstur yang menarik.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
@@ -293,97 +301,105 @@
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-1.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Grilled Chicken Salad.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Grilled Chicken Salad</span>
+                                            <span class="text-primary">165k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Salad hijau dengan potongan ayam panggang, tomat, mentimun, wortel, dan dressing pilihan</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-2.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Classic Burger.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Classic Burger</span>
+                                            <span class="text-primary">55k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Burger daging sapi panggang dengan keju, selada, tomat, bawang, dan saus.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-3.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Vegetable Stir-fry.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger  ( 50% OFF )</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Vegetable Stir-fry</span>
+                                            <span class="text-primary">85k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Tumis sayuran segar dengan pilihan saus seperti saus tiram atau saus kedelai.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-4.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Soup and Sandwich Combo.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Soup and Sandwich Combo</span>
+                                            <span class="text-primary">95k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Pilihan sup harian dengan setengah sandwich (misalnya, sandwich ayam panggang atau tuna).</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-5.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Stuffed Bell Peppers.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Stuffed Bell Peppers ( 50% OFF )</span>
+                                            <span class="text-primary">225k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Paprika yang diisi dengan campuran nasi, sayuran, dan kacang-kacangan.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-6.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Margherita Pizza.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Margherita Pizza</span>
+                                            <span class="text-primary">150k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Pizza dengan tomat, mozzarella, dan basil.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-7.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Bento Box.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Bento Box</span>
+                                            <span class="text-primary">165k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Kotak makan siang dengan berbagai hidangan seperti nasi, daging, dan sayuran.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-8.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Pasta Carbonara.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Pasta Carbonara</span>
+                                            <span class="text-primary">125k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Pasta dengan saus krim, bacon, dan keju parmesan.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
@@ -393,97 +409,105 @@
                         <div class="row g-4">
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-1.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Grilled Salmon Fillet.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Grilled Salmon Fillet</span>
+                                            <span class="text-primary">275k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Fillet salmon panggang dengan rempah-rempah, disajikan dengan pilihan sisi seperti nasi atau sayuran panggang.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-2.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Pasta Aglio e Olio.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Pasta Aglio e Olio</span>
+                                            <span class="text-primary">150k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Pasta spaghetti dengan saus minyak zaitun, bawang putih, dan cabe, disajikan dengan parmesan parut.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-3.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Steak with Mashed Potatoes.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Steak with Mashed Potatoes</span>
+                                            <span class="text-primary">270k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Steak sapi panggang dengan saus jus, disajikan dengan kentang tumbuk dan sayuran panggang.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-4.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Vegetarian Buddha Bowl.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Vegetarian Buddha Bowl</span>
+                                            <span class="text-primary">150k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic"></small> Mangkuk besar berisi nasi atau quinoa, sayuran panggang, kacang-kacangan, dan saus tahini.
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-5.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Duck Confit.jpeg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Duck Confit</span>
+                                            <span class="text-primary">175k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Bebek yang dimasak perlahan dalam lemaknya sendiri hingga dagingnya sangat empuk, disajikan dengan kentang goreng dan salad hijau.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-6.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Lamb Chops.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Lamb Chops</span>
+                                            <span class="text-primary">250k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Potongan daging domba yang dipanggang hingga empuk, biasanya disajikan dengan saus rosemary atau mint, dan dilengkapi dengan sayuran musiman serta kentang.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-7.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Risotto.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
-                                        </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                            <span>Risotto</span>
+                                            <span class="text-primary">125k</span>
+                                          </h5>
+                                        <small class="fst-italic">Nasi Italia yang dimasak dengan kaldu hingga creamy, seringkali ditambahkan dengan bahan-bahan seperti jamur, udang, atau asparagus, serta keju parmesan untuk rasa yang kaya.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="d-flex align-items-center">
-                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/menu-8.jpg" alt="" style="width: 80px;">
+                                    <img class="flex-shrink-0 img-fluid rounded" src="{{ asset('')}}frontend/img/Seafood Paella.jpg" alt="" style="width: 80px;">
                                     <div class="w-100 d-flex flex-column text-start ps-4">
                                         <h5 class="d-flex justify-content-between border-bottom pb-2">
-                                            <span>Chicken Burger</span>
-                                            <span class="text-primary">125k <s style="color:red;font-size:12px;text-decoration:strike;">225k</s></span>
+                                            <span>Seafood Paella</span>
+                                            <span class="text-primary">245k</span>
                                         </h5>
-                                        <small class="fst-italic">Ipsum ipsum clita erat amet dolor justo diam</small>
+                                        <small class="fst-italic">Hidangan nasi Spanyol yang dimasak dengan saffron, kaldu, dan berbagai jenis seafood seperti udang, kerang, dan cumi. Dilengkapi dengan paprika dan kacang polong.</small>
+                                        <button class="material-symbols-outlined" style="background-color:orange; color:white; border-color:orange">shopping_cart_checkout</button>
                                     </div>
                                 </div>
                             </div>
