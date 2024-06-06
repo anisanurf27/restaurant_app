@@ -1,12 +1,4 @@
 @extends('layouts/layout_welcome');
-<style>
-    .nav-link.active {
-        color: #ff6347; /* Example active link color */
-    }
-    section {
-        height: 100vh; /* Example section height */
-    }
-</style>
 
 @section('content')
 <div class="container-xxl bg-white p-0">
@@ -30,14 +22,14 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="#reservation" class="dropdown-item">Booking</a>
+                            <a href="{{ route('reservation') }}" class="dropdown-item">Booking</a>
                             <a href="#team" class="dropdown-item">Our Team</a>
                             <a href="#testimonial" class="dropdown-item">Testimonial</a>
                         </div>
                     </div>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
                 </div>
-                <a href="#reservation" class="btn btn-primary py-2 px-4">Book A Table</a>
+                <a href="{{ route('reservation') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
             </div>
         </nav>
 

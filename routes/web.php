@@ -46,3 +46,6 @@ Route::resource('orderdetails', OrderDetailController::class);
 Route::resource('reservations', ReservationController::class);
 Route::resource('restaurants', RestaurantController::class);
 Route::resource('reviews', ReviewController::class);
+
+Route::get('/reservation', [App\Http\Controllers\ReservationController::class, 'index'])->name('reservation');
+
