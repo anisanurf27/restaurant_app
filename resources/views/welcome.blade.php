@@ -1,5 +1,12 @@
 @extends('layouts/layout_welcome');
-
+<style>
+    .nav-link.active {
+        color: #ff6347; /* Example active link color */
+    }
+    section {
+        height: 100vh; /* Example section height */
+    }
+</style>
 
 @section('content')
 <div class="container-xxl bg-white p-0">
@@ -8,7 +15,7 @@
     <div class="container-xxl position-relative p-0" id="home">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
             <a href="" class="navbar-brand p-0">
-                <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Rizil Anabilan Resto</h1>
+                <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>2'Resto</h1>
                 <!-- <img src="{{ asset('')}}frontend/img/logo.png" alt="Logo"> -->
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -38,7 +45,7 @@
             <div class="container my-5 py-5">
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 text-center text-lg-start">
-                        <h1 class="display-3 text-white animated slideInLeft">Selamat Datang<br>Di Rizil Anabilan Resto</h1>
+                        <h1 class="display-3 text-white animated slideInLeft">Selamat Datang<br>2'Resto</h1>
                         <p class="text-white animated slideInLeft mb-4 pb-2">kami mengundang Anda untuk merasakan pengalaman kuliner yang autentik dan memuaskan di tengah-tengah keramaian kota. Terletak di jantung pusat kota, restoran kami menawarkan suasana yang hangat dan ramah, cocok untuk bersantai bersama keluarga dan teman..</p>
                         <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                     </div>
@@ -120,8 +127,8 @@
                 </div>
                 <div class="col-lg-6" >
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
-                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>Aresto</h1>
-                    <p class="mb-4">At Aresto, we pride ourselves on providing an exceptional dining experience. Our menu features a delightful selection of international cuisines, expertly crafted to tantalize your taste buds. From the bold flavors of Asia to the comforting classics of Europe, each dish is prepared with care and precision.</p>
+                    <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>2'Resto</h1>
+                    <p class="mb-4">At 2'Resto, we pride ourselves on providing an exceptional dining experience. Our menu features a delightful selection of international cuisines, expertly crafted to tantalize your taste buds. From the bold flavors of Asia to the comforting classics of Europe, each dish is prepared with care and precision.</p>
                     <p class="mb-4">Come and discover a world of culinary delights at Aresto. Whether you're joining us for a casual meal or a special occasion, our friendly staff and inviting atmosphere will make your visit truly memorable.</p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
@@ -521,7 +528,7 @@
 
 
     <!-- Reservation Start -->
-    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation" style="height: 100vh;">
+    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation" style="height: 110vh;">
         <div class="row g-0" style="height: 100%;">
             <div class="col-md-6 d-flex flex-column" style="height: 100%;">
                 <img class="img-fluid" src="{{ asset('')}}frontend/img/book_table.jpg" alt="" style="object-fit: cover; height: 100%; flex-grow: 1;">
