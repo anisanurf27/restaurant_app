@@ -18,7 +18,6 @@
                     <a href="#home" class="nav-item nav-link active">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#service" class="nav-item nav-link">Service</a>
-                    <a href="#menu" class="nav-item nav-link">Menu</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
@@ -60,7 +59,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-user-tie text-primary mb-4"></i>
                             <h5>Master Chefs</h5>
-                            <p>Master Chefs is an exquisite culinary experience, where silent mastery meets the art of flavors. Immerse yourself in the perfect blend of sophistication and rich tastes, a journey through culinary excellence.</p>
+                            <p>Pengalaman kuliner istimewa yang memadukan keterampilan memasak dengan seni rasa. Benamkan diri Anda dalam perpaduan sempurna antara pengalaman dan cita rasa yang kaya, sebuah perjalanan melalui keunggulan kuliner.</p>
                         </div>
                     </div>
                 </div>
@@ -69,7 +68,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-utensils text-primary mb-4"></i>
                             <h5>Quality Food</h5>
-                            <p>Experience unparalleled excellence in cuisine at Quality Food. Immerse yourself in the sophisticated blend of flavors, where each dish is crafted with precision, ensuring a delightful culinary journey.</p>
+                            <p>Nikmati pengalaman bersantap mewah yang tak tertandingi. Benamkan diri Anda dalam perpaduan cita rasa yang canggih, di mana setiap hidangan dibuat dengan presisi, memastikan perjalanan kuliner yang menyenangkan.</p>
                         </div>
                     </div>
                 </div>
@@ -78,7 +77,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-cart-plus text-primary mb-4"></i>
                             <h5>Online Order</h5>
-                            <p>Explore the ease of online ordering with our seamless platform. Effortlessly discover a world of options from the comfort of your space. Experience convenience and exquisite choices at your fingertips.</p>
+                            <p>Jelajahi kemudahan pemesanan online dengan platform kami yang mudah. ​​Temukan berbagai pilihan dengan mudah dari tempat Anda yang nyaman. Rasakan kemudahan dan pilihan istimewa di ujung jari Anda.</p>
                         </div>
                     </div>
                 </div>
@@ -87,7 +86,7 @@
                         <div class="p-4">
                             <i class="fa fa-3x fa-headset text-primary mb-4"></i>
                             <h5>24/7 Service</h5>
-                            <p>Experience our 24/7 service that combines a serene atmosphere with impeccable attention. Embrace tranquility and enjoy exceptional hospitality—where every moment is crafted with care.</p>
+                            <p>Nikmati layanan 24/7 kami yang memadukan suasana yang tenang dengan pelayanan yang sempurna. Rasakan ketenangan dan keramahtamahan yang luar biasa—di mana setiap momen diciptakan dengan penuh perhatian.</p>
                         </div>
                     </div>
                 </div>
@@ -96,6 +95,55 @@
     </div>
     <!-- Service End -->
 
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('')}}frontend/img/slide-3.jpg" class="d-block mx-auto w-70" alt="slideshow">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('')}}frontend/img/slide-2.jpg" class="d-block mx-auto w-70" alt="slideshow">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                    <p>-</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('')}}frontend/img/slide-1.jpg" class="d-block mx-auto w-70" alt="slideshow">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5></h5>
+                    <p>-</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    @push('scripts')
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        var myCarousel = document.querySelector('#carouselExampleIndicators');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 5000, 
+            ride: 'carousel' // auto-slide
+        });
+    });
+    </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+    
 
     <!-- About Start -->
     <div class="container-xxl py-5" id="about">
@@ -118,26 +166,28 @@
                     </div>
                 </div>
                 <div class="col-lg-6" >
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">About Us</h5>
+                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Tentang Kami</h5>
                     <h1 class="mb-4">Welcome to <i class="fa fa-utensils text-primary me-2"></i>2'Resto</h1>
-                    <p class="mb-4">At 2'Resto, we pride ourselves on providing an exceptional dining experience. Our menu features a delightful selection of international cuisines, expertly crafted to tantalize your taste buds. From the bold flavors of Asia to the comforting classics of Europe, each dish is prepared with care and precision.</p>
-                    <p class="mb-4">Come and discover a world of culinary delights at Aresto. Whether you're joining us for a casual meal or a special occasion, our friendly staff and inviting atmosphere will make your visit truly memorable.</p>
+                    <p class="mb-4">Temukan sensasi kuliner yang memanjakan di restoran kami. Apakah Anda datang untuk menikmati makan malam yang tenang atau merayakan momen istimewa, staf kami yang ramah dan suasana yang mengundang siap membuat setiap kunjungan menjadi pengalaman yang berharga.
+                    </p>
+                    <p class="mb-4">Temukan sensasi kuliner yang memanjakan di restoran kami. Apakah Anda datang untuk menikmati makan malam yang tenang atau merayakan momen istimewa, staf kami yang ramah dan suasana yang mengundang siap membuat setiap kunjungan menjadi pengalaman yang berharga.</p>
+
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-primary px-3">
                                 <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">15</h1>
                                 <div class="ps-4">
-                                    <p class="mb-0">Years of</p>
-                                    <h6 class="text-uppercase mb-0">Experience</h6>
+                                    <p class="mb-0">Tahun</p>
+                                    <h6 class="text-uppercase mb-0">Pengalaman</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center border-start border-5 border-primary px-3">
-                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">50</h1>
+                                <h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">4</h1>
                                 <div class="ps-4">
-                                    <p class="mb-0">Popular</p>
-                                    <h6 class="text-uppercase mb-0">Master Chefs</h6>
+                                    <p class="mb-0">Master Chef</p>
+                                    <h6 class="text-uppercase mb-0">Terkenal</h6>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +198,6 @@
         </div>
     </div>
     <!-- About End -->
-
 
     <!-- Menu Start -->
     <div class="container-xxl py-5" id="menu">
@@ -646,135 +695,62 @@
     </div>
     <!-- Team End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="testimonial">
-        <div class="container">
-            <div class="text-center">
-                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
-                <h1 class="mb-5">Our Clients Say!!!</h1>
+ <!-- Testimonial Start -->
+ <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s" id="testimonial">
+    <div class="container">
+        <div class="text-center">
+            <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
+            <h1 class="mb-5">Our Clients Say!!!</h1>
+        </div>
+        <div class="owl-carousel testimonial-carousel">
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">client name</h5>
+                        <small>Profession</small>
+                    </div>
+                </div>
             </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item bg-transparent border rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
-                        <div class="ps-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <small>Profession</small>
-                        </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">Client Name</h5>
+                        <small>Profession</small>
                     </div>
                 </div>
-                <div class="testimonial-item bg-transparent border rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
-                        <div class="ps-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <small>Profession</small>
-                        </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">Client Name</h5>
+                        <small>Profession</small>
                     </div>
                 </div>
-                <div class="testimonial-item bg-transparent border rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
-                        <div class="ps-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <small>Profession</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-item bg-transparent border rounded p-4">
-                    <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
-                    <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                    <div class="d-flex align-items-center">
-                        <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
-                        <div class="ps-3">
-                            <h5 class="mb-1">Client Name</h5>
-                            <small>Profession</small>
-                        </div>
+            </div>
+            <div class="testimonial-item bg-transparent border rounded p-4">
+                <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+                <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                <div class="d-flex align-items-center">
+                    <img class="img-fluid flex-shrink-0 rounded-circle" src="{{ asset('')}}frontend/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                    <div class="ps-3">
+                        <h5 class="mb-1">Client Name</h5>
+                        <small>Profession</small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Contact Start -->
-    <div class="container-xxl py-5" id="contact">
-        <div class="container">
-            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                <h5 class="section-title ff-secondary text-center text-primary fw-normal">Contact Us</h5>
-                <h1 class="mb-5">Contact For Any Query</h1>
-            </div>
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="row gy-4">
-                        <div class="col-md-4">
-                            <h5 class="section-title ff-secondary fw-normal text-start text-primary">Booking</h5>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
-                        </div>
-                        <div class="col-md-4">
-                            <h5 class="section-title ff-secondary fw-normal text-start text-primary">General</h5>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
-                        </div>
-                        <div class="col-md-4">
-                            <h5 class="section-title ff-secondary fw-normal text-start text-primary">Technical</h5>
-                            <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
-                    <iframe class="position-relative rounded w-100 h-100"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
-                </div>
-                <div class="col-md-6">
-                    <div class="wow fadeInUp" data-wow-delay="0.2s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-    
+</div>
+<!-- Testimonial End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -790,7 +766,7 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Jakarta, Indonesia</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Bandung, Indonesia</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
                     <div class="d-flex pt-2">
@@ -821,7 +797,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">AslanAsilon</a>, 
+                        &copy; <a class="border-bottom" href="#">Gamelab.id</a>, 
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
