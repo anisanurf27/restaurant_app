@@ -10,7 +10,6 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
         <a href="" class="navbar-brand p-0">
             <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>2'Resto</h1>
-            <!-- <img src="{{ asset('')}}frontend/img/logo.png" alt="Logo"> -->
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
@@ -33,58 +32,59 @@
             </div>
             <a href="{{ route('reservation') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
         </div>
-    </nav> 
+    </nav>
 
-    <div class="container-xxl px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation" style="height: 100vh;">
-        <div class="row g-0" style="height: 100%;">
-            <div class="col-md-6 d-flex flex-column" style="height: 100%;">
-                <img class="img-fluid" src="{{ asset('frontend/img/book_table.jpg') }}" alt="Book Table" style="object-fit: cover; height: 100%; flex-grow: 1;">
+    <div class="container-fluid px-0" id="reservation" style="min-height: 100vh;">
+        <div class="row g-0" style="min-height: 100vh;">
+            <div class="col-lg-6 col-md-12 d-flex flex-column" style="min-height: 50vh;">
+                <img class="img-fluid w-100 h-100" src="{{ asset('frontend/img/book_table.jpg') }}" alt="Book Table" style="object-fit: cover;">
             </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center" style="height: 100%;">
+            <div class="col-lg-6 col-md-12 bg-dark d-flex align-items-center" style="min-height: 50vh;">
                 <div class="p-5 wow fadeInUp w-100" data-wow-delay="0.2s">
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                     <h1 class="text-white mb-4">Book A Table Online</h1>
-                    <form>
+                    <form action="{{ route('reservations.store') }}" method="POST" id="form-reservasi">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                    <label for="name">Your Name</label>
+                                    <input type="text" class="form-control" id="cust_name" name="cust_name" placeholder="Your Name" required>
+                                    <label for="cust_name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                    <label for="email">Your Email</label>
+                                    <input type="email" class="form-control" id="contact" name="contact" placeholder="Your Email" required>
+                                    <label for="contact">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating date" id="date3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
-                                    <label for="datetime">Date & Time</label>
+                                    <input type="datetime-local" class="form-control" id="reservation_date" name="reservation_date" placeholder="Date & Time" required>
+                                    <label for="reservation_date">Date & Time</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <select class="form-select" id="select1">
+                                    <select class="form-select" id="number_guest" name="number_guest" required>
                                         <option value="1">People 1</option>
                                         <option value="2">People 2</option>
                                         <option value="3">People 3</option>
                                     </select>
-                                    <label for="select1">No Of People</label>
+                                    <label for="number_guest">No Of People</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
-                                    <label for="message">Special Request</label>
+                                    <textarea class="form-control" name="special_request" placeholder="Special Request" id="special_request" style="height: 100px"></textarea>
+                                    <label for="special_request">Special Request</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
                             </div>
                         </div>
-                    </form>
+                    </form>                    
                 </div>
             </div>
         </div>
@@ -135,11 +135,11 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">AslanAsilon</a>, 
+                        &copy; <a class="border-bottom" href="#">Kelompok 2 - Fullstack 3</a>, 
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
+                            <a href="{{ url('/') }}">Home</a>
                             <a href="">Cookies</a>
                             <a href="">Help</a>
                             <a href="">FQAs</a>
@@ -151,11 +151,97 @@
     </div>
     <!-- Footer End -->
 
-
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 @stop
 
+@section('css')
+<style>
+    html, body {
+        height: 100%;
+    }
+    #reservation {
+        min-height: 100vh;
+    }
+    #reservation .col-lg-6, 
+    #reservation .col-md-12 {
+        min-height: 50vh;
+    }
+    .navbar-brand h1 {
+        font-size: 1.75rem;
+    }
+    .form-floating label {
+        color: #6c757d;
+    }
+    .form-control .form-select{
+        background-color: #ffffff;
+        color: #fff;
+    }
+    .form-control:focus .form-select:focus{
+        background-color: #FFF2D7;
+        color: #fff;
+    }
+    .form-control::placeholder {
+        color: #6c757d;
+    }
+    .footer {
+        background: #111;
+        color: #ddd;
+    }
+    .footer a {
+        color: #ddd;
+    }
+    .footer a:hover {
+        color: #fff;
+    }
+    .footer .btn-social {
+        margin-right: .5rem;
+    }
+    .swal-confirm-button {
+        background-color: orange !important; 
+        border-color: orange !important; 
+        color: white !important; 
+    }
+</style>
+@stop
+
 @section('js')
-    <script> console.log('Hi!'); </script>
+    {{-- Store Redevation Data --}}
+    <script>
+        $(document).ready(function () {
+            $('#form-reservasi').submit(function (e) {
+                e.preventDefault();
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "Do you want to proceed with the reservation?",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, proceed",
+                    cancelButtonText: "Cancel",
+                    reverseButtons: true,
+                    customClass: {
+                        confirmButton: 'swal-confirm-button'
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            type: 'POST',
+                            url: '{{ route('reservations.store') }}',
+                            data: $(this).serialize(),
+                            success: function (response) {
+                                Swal.fire("Success!", response.message, "success");
+    
+                                $('#form-reservasi')[0].reset();
+                            },
+                            error: function (error) {
+                                Swal.fire("Error!", error.responseJSON.message, "error");
+                            }
+                        });
+                    } else {
+                        return false;
+                    }
+                });
+            });
+        });
+    </script>    
 @stop

@@ -31,8 +31,11 @@
     <!-- Template Stylesheet -->
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
 
-     <!-- Google Icons -->
-     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <!-- Additional CSS for the layout -->
+    @yield('css')
 </head>
 
 <body>
@@ -54,6 +57,12 @@
     
     <!-- Template Javascript -->
     <script src="{{ asset('frontend/js/main.js') }}"></script>
+
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Additional JS for the layout -->
+    @yield('js')
 </body>
 
 </html>
