@@ -867,7 +867,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">AslanAsilon</a>, 
+                        &copy; <a class="border-bottom" href="#">Kelompok 2 - Fullstack 3</a>, 
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">

@@ -48,4 +48,4 @@ Route::resource('restaurants', RestaurantController::class);
 Route::resource('reviews', ReviewController::class);
 
 Route::get('/reservation', [App\Http\Controllers\ReservationController::class, 'index'])->name('reservation');
-
+Route::get('/reservation-store', [App\Http\Controllers\ReservationController::class, 'store'])->name('reservation.store');

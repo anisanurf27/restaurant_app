@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('menu_id');
             $table->string('cust_name');
             $table->string('contact');
-            $table->string('reservation_date');
+            $table->datetime('reservation_date');
             $table->string('number_guest');
-            $table->string('slug');
+            $table->string('special_request');
             $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });

@@ -567,14 +567,13 @@
     </div>
     <!-- Menu End -->
 
-
     <!-- Reservation Start -->
-    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation" style="height: 110vh;">
-        <div class="row g-0" style="height: 100%;">
-            <div class="col-md-6 d-flex flex-column" style="height: 100%;">
-                <img class="img-fluid" src="{{ asset('')}}frontend/img/book_table.jpg" alt="" style="object-fit: cover; height: 100%; flex-grow: 1;">
+    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation">
+        <div class="row g-0">
+            <div class="col-lg-6 d-none d-lg-flex">
+                <img class="img-fluid w-100" src="{{ asset('')}}frontend/img/book_table.jpg" alt="" style="object-fit: cover;">
             </div>
-            <div class="col-md-6 bg-dark d-flex align-items-center" style="height: 100%;">
+            <div class="col-lg-6 col-12 bg-dark d-flex align-items-center">
                 <div class="p-5 wow fadeInUp w-100" data-wow-delay="0.2s">
                     <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
                     <h1 class="text-white mb-4">Book A Table Online</h1>
@@ -624,7 +623,6 @@
         </div>
     </div>
     <!-- Reservation End -->
-
 
     <!-- Team Start -->
     <div class="container-xxl pt-5 pb-3" id="team">
@@ -760,7 +758,7 @@
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
                     <a class="btn btn-link" href="">About Us</a>
                     <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Reservation</a>
+                    <a class="btn btn-link" href="{{ route('reservation') }}">Reservation</a>
                     <a class="btn btn-link" href="">Privacy Policy</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
                 </div>
