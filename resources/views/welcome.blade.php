@@ -31,8 +31,8 @@
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
                         <div class="dropdown-menu m-0">
 
-                            <a href="{{ route('login') }}" class="dropdown-item">Login</a>
-                            <a href="{{ route('register') }}" class="dropdown-item">Register</a>
+                            <a href="{{ route('admin.login') }}" class="dropdown-item">Admin</a>
+                            <a href="#" class="dropdown-item">User</a>
                         </div>
                     </div>
                 </div>
