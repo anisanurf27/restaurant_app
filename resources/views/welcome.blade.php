@@ -27,6 +27,14 @@
                         </div>
                     </div>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
+                        <div class="dropdown-menu m-0">
+
+                            <a href="{{ route('login') }}" class="dropdown-item">Login</a>
+                            <a href="{{ route('register') }}" class="dropdown-item">Register</a>
+                        </div>
+                    </div>
                 </div>
                 <a href="{{ route('reservation') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
             </div>
