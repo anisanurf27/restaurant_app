@@ -30,4 +30,18 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
+    public function viewlogin()
+    {
+        return view("auth.login");
+    }
+
+    public function viewregister()
+    {
+        return view("auth.register");
+    }
+
+    public function dashboardadmin()
+    {
+        return view("dashboard.admin");
+    }
 }

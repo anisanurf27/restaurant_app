@@ -15,28 +15,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto py-0 pe-4">
-                    <a href="#home" class="nav-item nav-link active">Home</a>
+                    <a href="#home" class="nav-item nav-link">Home</a>
                     <a href="#about" class="nav-item nav-link">About</a>
                     <a href="#service" class="nav-item nav-link">Service</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="{{ route('reservation') }}" class="dropdown-item">Booking</a>
-                            <a href="#team" class="dropdown-item">Our Team</a>
-                            <a href="#testimonial" class="dropdown-item">Testimonial</a>
-                        </div>
-                    </div>
+                    <a href="#team" class="nav-item nav-link">Our Team</a>
+                    <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
+                    @guest
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
                         <div class="dropdown-menu m-0">
-
-                            <a href="{{ route('admin.login') }}" class="dropdown-item">Admin</a>
-                            <a href="#" class="dropdown-item">User</a>
+                            <a href="{{ route('login') }}" class="dropdown-item">login</a>
+                            <a href="{{route('register')}}" class="dropdown-item">register</a>
                         </div>
                     </div>
+                    @endguest
+                    @auth
+                    <a href="{{ route('reservation') }}" class="nav-item nav-link">Reservation</a>
+                    <a href="#" class="nav-item nav-link active">{{ Auth::user()->name }}</a>
+                    <a href="{{ route('logout')}}" class="nav-item nav-link">Logout</a>
+                    @endauth
                 </div>
-                <a href="{{ route('reservation') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
             </div>
         </nav>
 
@@ -106,21 +105,21 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="{{ asset('')}}frontend/img/slide-3.jpg" class="d-block mx-auto w-70" alt="slideshow">
+                <img src="{{ asset('frontend/img/team-3.jpg')}}" class="d-block mx-auto w-70" alt="slideshow">
                 <div class="carousel-caption d-none d-md-block">
                     <h5></h5>
                     <p>-</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('')}}frontend/img/slide-2.jpg" class="d-block mx-auto w-70" alt="slideshow">
+                <img src="{{ asset('frontend/img/team-2.jpg')}}" class="d-block mx-auto w-70" alt="slideshow">
                 <div class="carousel-caption d-none d-md-block">
                     <h5></h5>
                     <p>-</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="{{ asset('')}}frontend/img/slide-1.jpg" class="d-block mx-auto w-70" alt="slideshow">
+                <img src="{{ asset('frontend/img/team-1.jpg')}}" class="d-block mx-auto w-70" alt="slideshow">
                 <div class="carousel-caption d-none d-md-block">
                     <h5></h5>
                     <p>-</p>
@@ -759,7 +758,7 @@
 <!-- Testimonial End -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s" id="contact">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
