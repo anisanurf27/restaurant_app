@@ -29,9 +29,9 @@ use App\Http\Controllers\AdminAuthController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+    // Route::get('/', function () {
+    //     return view('welcome');
+    // });
 
 // Admins login
 // Route::get('admin/login', [AdminAuthController::class, 'showLoginForm'])->name('admin.login');
@@ -74,4 +74,9 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [Controller::class,'viewregister'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
 
-Route::get('/admin', [Controller::class,'dashboardadmin'])->name('admin');
+Route::get('/', [Controller::class,'dashboard'])->name('dashboard');
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/admin', [Controller::class,'dashboardadmin'])->name('admin');
+    Route::get('/user', [Controller::class,'dashboarduser'])->name('user');
+});

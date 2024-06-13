@@ -30,7 +30,7 @@ class LoginController extends Controller
             if ($user->role === 'admin') {
                 return redirect()->intended('/admin');
             } else {
-                return redirect()->intended('/');
+                return redirect()->intended('/user');
             }
         }
 
@@ -48,6 +48,6 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect()->route('login');
+        return redirect()->route('dashboard');
     }
 }

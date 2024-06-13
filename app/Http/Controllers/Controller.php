@@ -44,4 +44,15 @@ class Controller extends BaseController
     {
         return view("dashboard.admin");
     }
+
+    public function dashboarduser()
+    {
+        return view("user");
+    }
+
+    public function dashboard()
+    {
+        return view("welcome");
+    }
+
 }

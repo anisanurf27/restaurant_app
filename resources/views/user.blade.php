@@ -21,7 +21,7 @@
                     <a href="#team" class="nav-item nav-link">Our Team</a>
                     <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
                     <a href="#contact" class="nav-item nav-link">Contact</a>
-        
+                    @guest
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Login</a>
                         <div class="dropdown-menu m-0">
@@ -29,11 +29,12 @@
                             <a href="{{route('register')}}" class="dropdown-item">register</a>
                         </div>
                     </div>
-                    <!-- @auth
+                    @endguest
+                    @auth
                     <a href="{{ route('reservation') }}" class="nav-item nav-link">Reservation</a>
                     <a href="#" class="nav-item nav-link active">{{ Auth::user()->name }}</a>
                     <a href="{{ route('logout')}}" class="nav-item nav-link">Logout</a>
-                    @endauth -->
+                    @endauth
                 </div>
             </div>
         </nav>
@@ -572,6 +573,63 @@
         </div>
     </div>
     <!-- Menu End -->
+
+    <!-- Reservation Start -->
+    <div class="container-xxl py-5 px-0 wow fadeInUp" data-wow-delay="0.1s" id="reservation">
+        <div class="row g-0">
+            <div class="col-lg-6 d-none d-lg-flex">
+                <img class="img-fluid w-100" src="{{ asset('')}}frontend/img/book_table.jpg" alt="" style="object-fit: cover;">
+            </div>
+            <div class="col-lg-6 col-12 bg-dark d-flex align-items-center">
+                <div class="p-5 wow fadeInUp w-100" data-wow-delay="0.2s">
+                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                    <h1 class="text-white mb-4">Book A Table Online</h1>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating date" id="date3" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" id="datetime" placeholder="Date & Time" data-target="#date3" data-toggle="datetimepicker" />
+                                    <label for="datetime">Date & Time</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" id="select1">
+                                        <option value="1">People 1</option>
+                                        <option value="2">People 2</option>
+                                        <option value="3">People 3</option>
+                                    </select>
+                                    <label for="select1">No Of People</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Special Request" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Special Request</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reservation End -->
 
     <!-- Team Start -->
     <div class="container-xxl pt-5 pb-3" id="team">
