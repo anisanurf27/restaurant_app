@@ -55,4 +55,9 @@ class Controller extends BaseController
         return view("welcome");
     }
 
+    public function app()
+    {
+        return view("adminlte.layouts.app");
+    }
+
 }

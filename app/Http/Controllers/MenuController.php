@@ -10,10 +10,8 @@ class MenuController extends Controller
 {
     public function index()
     {
-        $menus = Menu::all();
-        return view('menu.index',compact('menus'));
+        return view("menu.index");
     }
-
     
         
     public function create()
@@ -28,11 +26,11 @@ class MenuController extends Controller
     }
 
 
-    public function edit(ProductImage $productimage)
+    public function edit()
     {
     }
 
-    public function update(Request $request, ProductImage $productimage)
+    public function update()
     {
         
     }

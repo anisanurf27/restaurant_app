@@ -16,6 +16,7 @@ use App\Http\Controllers\RestaurantController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\KategoriController;
 
 
 /*
@@ -74,9 +75,16 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/register', [Controller::class,'viewregister'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.post');
 
-Route::get('/', [Controller::class,'dashboard'])->name('dashboard');
+Route::get('/', [Controller::class, 'dashboard'])->name('dashboard');
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::get('/admin', [Controller::class,'dashboardadmin'])->name('admin');
-    Route::get('/user', [Controller::class,'dashboarduser'])->name('user');
+    Route::get('/admin', [Controller::class, 'dashboardadmin'])->name('admin');
+    Route::get('/user', [Controller::class, 'dashboarduser'])->name('user');
+
+    // Kategori
+    Route::get('/kategori', [KategoriController::class, 'index'])->name('daftar.kategori');
+
+    // Menu
+    Route::get('/menu', [MenuController::class, 'index'])->name('daftar.menu');
+
 });
