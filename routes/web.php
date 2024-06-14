@@ -82,9 +82,15 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/user', [Controller::class, 'dashboarduser'])->name('user');
 
     // Kategori
-    Route::get('/kategori', [KategoriController::class, 'index'])->name('daftar.kategori');
-
+    Route::get('/kategori', [KategoriController::class, 'index'])->name('daftarKategori');
+    Route::get('/kategori/create', [KategoriController::class, 'create'])->name('createKategori');
+    Route::post('/kategori/create', [KategoriController::class, 'store'])->name('storeKategori');
+    Route::get('/kategori/{id}/edit', [KategoriController::class, 'edit'])->name('editKategori');
+    Route::post('/kategori/{id}/update', [KategoriController::class, 'update'])->name('updateKategori');
+    Route::get('/kategori/{id}/delete', [KategoriController::class, 'destroy'])->name('deleteKategori');
+    
     // Menu
-    Route::get('/menu', [MenuController::class, 'index'])->name('daftar.menu');
+    Route::get('/menu', [MenuController::class, 'index'])->name('daftarMenu');
+    
 
 });

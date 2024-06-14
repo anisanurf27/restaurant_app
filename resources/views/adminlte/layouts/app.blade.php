@@ -114,13 +114,13 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('daftar.kategori')}}" class="nav-link active">
+                  <a href="{{ route('daftarKategori')}}" class="nav-link active">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Daftar Kategori</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('daftar.menu') }}" class="nav-link">
+                  <a href="{{ route('daftarMenu') }}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Daftar Menu</p>
                   </a>
@@ -148,10 +148,9 @@
     </aside>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        @yield('content')
-    </div>
+    @yield('content')
     <!-- /.content-wrapper -->
+     
     <footer class="main-footer">
       <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
       All rights reserved.
