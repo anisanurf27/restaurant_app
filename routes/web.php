@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Order1Controller;
+use App\Http\Controllers\ContactController;
 
 
 
@@ -51,6 +52,7 @@ Route::resource('members', MemberController::class);
 Route::resource('menus', MenuController::class);
 Route::resource('orders', OrderController::class);
 Route::resource('orderdetails', OrderDetailController::class);
+
 Route::resource('reservations', ReservationController::class);
 Route::resource('restaurants', RestaurantController::class);
 Route::resource('reviews', ReviewController::class);
@@ -95,3 +97,7 @@ Route::post('/checkout', [Order1Controller::class, 'processCheckout'])->name('ch
 Route::get('/pelanggan', function () {
     return view('customer.dashboard');
 })->name('dashboard');
+
+
+//contact
+Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');

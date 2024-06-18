@@ -31,7 +31,7 @@
                             <a href="#" class="dropdown-item"><i class="fa fa-user"></i> Profile</a>
                             <a href="#" class="dropdown-item"><i class="fa fa-shopping-cart"></i> Orders</a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item" id="logout-button">
+                            <a href="{{ route('login.post') }}" class="dropdown-item" id="logout-button">
                                 <i class="fa fa-sign-out-alt"></i> Logout
                             </a>
                         </div>
@@ -544,31 +544,30 @@
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
+                            <form action="{{ route('send.message') }}" method="POST">
+                                @csrf
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
                                             <label for="name">Nama Lengkap</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email"
-                                                placeholder="Your Email">
-                                            <label for="email">No WhatsApp</label>
+                                            <input type="text" class="form-control" id="contact_info" name="contact_info" placeholder="Your Email or Phone Number">
+                                            <label for="contact_info">Email atau Nomor HP</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
                                             <label for="subject">Subject</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here"
-                                                id="message" style="height: 150px"></textarea>
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
@@ -577,6 +576,9 @@
                                     </div>
                                 </div>
                             </form>
+                            
+                            
+                            
                         </div>
                     </div>
                 </div>
