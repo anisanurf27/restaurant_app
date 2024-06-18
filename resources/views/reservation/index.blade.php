@@ -7,30 +7,7 @@
 @stop
 
 @section('content')
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
-        <a href="" class="navbar-brand p-0">
-            <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>2'Resto</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="fa fa-bars"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0 pe-4">
-                <a href="{{ url('/') }}" class="nav-item nav-link">Home</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="#reservation" class="dropdown-item active">Booking</a>
-                        <a href="#team" class="dropdown-item">Our Team</a>
-                        <a href="#testimonial" class="dropdown-item">Testimonial</a>
-                    </div>
-                </div>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="{{ route('reservation') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
-        </div>
-    </nav>
-
+    {{-- Formulir Reservation --}}
     <div class="container-fluid px-0" id="reservation" style="min-height: 100vh;">
         <div class="row g-0" style="min-height: 100vh;">
             <div class="col-lg-6 col-md-12 d-flex flex-column" style="min-height: 50vh;">
@@ -38,10 +15,17 @@
             </div>
             <div class="col-lg-6 col-md-12 bg-dark d-flex align-items-center" style="min-height: 50vh;">
                 <div class="p-5 wow fadeInUp w-100" data-wow-delay="0.2s">
-                    <h5 class="section-title ff-secondary text-start text-primary fw-normal">Reservation</h5>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-primary"><i class="fa fa-utensils me-3"></i>2'Resto</h3>
+                        <a href="{{ route('dashboard') }}" class="btn btn-primary py-2 px-4">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </a> 
+                    </div>
+                    <h5 class="section-title ff-secondary text-start text-primary fw-normal mb-2">Reservation</h5>
                     <h1 class="text-white mb-4">Book A Table Online</h1>
                     <form action="{{ route('reservations.store') }}" method="POST" id="form-reservasi">
                         @csrf
+                        <input type="hidden" id="user_id" name="user_id" value="{{ auth()->id() }}">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -81,11 +65,41 @@
                                 <button class="btn btn-primary w-100 py-3" type="submit">Book Now</button>
                             </div>
                         </div>
-                    </form>                    
+                    </form>
+                </div>
+            </div>            
+        </div>
+    </div>
+
+    {{-- Show Table Data Reservation --}}
+    <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s" style="min-height: 100vh;" id="card-tabel"> 
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-11">
+                    <div class="table-responsive">
+                        <h3 class="text-center mb-4">
+                            <span style="color: orange">My</span>
+                            <span style="color: white">Reservation</span>
+                        </h3>
+                        <table id="reservations-table" class="table table-hovered table-striped table-condensed table-white-mode">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th style="width: 150px;">Reservation Date</th>
+                                    <th>Customer Name</th>
+                                    <th>Contact</th>
+                                    <th>Number of Guests</th>
+                                    <th>Special Requests</th>
+                                    <th>Remark</th>
+                                    <th style="width: 120px;">Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-light footer pt-3 mt-3 wow fadeIn" data-wow-delay="0.1s">
@@ -150,9 +164,12 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    @include('reservation._modal_edit')
 @stop
 
 @section('css')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
 <style>
     html, body {
         height: 100%;
@@ -199,11 +216,83 @@
         border-color: orange !important; 
         color: white !important; 
     }
+    /* Styling for table */
+    #reservations-table_wrapper {
+        margin-top: 20px;
+    }
+
+    #reservations-table th,
+    #reservations-table td {
+        vertical-align: middle;
+    }
+
+    #reservations-table .action-column {
+        width: 100px; /* Adjust width as needed */
+        text-align: center;
+    }
+
+    /* Styling for white mode table */
+    .table-white-mode {
+        color: #000000; /* Black text color */
+        background-color: #ffffff; /* White background color */
+    }
+
+    .table-white-mode thead th {
+        color: #000000; /* Black text color for table header */
+        background-color: #f2f2f2; /* Light gray background color for table header */
+        border-color: #dddddd; /* Border color */
+    }
+
+    .table-white-mode tbody td {
+        color: #000000; /* Black text color for table body */
+        background-color: #ffffff; /* White background color for table body */
+        border-color: #dddddd; /* Border color */
+    }
+    .dataTables_wrapper .top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    .dataTables_wrapper .bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_filter {
+        margin-left: 10px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .dataTables_wrapper .dataTables_length {
+        margin-right: 10px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .dataTables_wrapper .dataTables_length select{
+        color: #ffffff;
+    }
+
+    .dataTables_wrapper .dataTables_info{
+        color: #ffffff;
+        margin-bottom: 25px;
+    }
+
+    .dataTables_wrapper .dataTables_paginate {
+        margin-right: 10px;
+    }
+
 </style>
 @stop
 
 @section('js')
-    {{-- Store Redevation Data --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+
+    {{-- Store Reservation Data --}}
     <script>
         $(document).ready(function () {
             $('#form-reservasi').submit(function (e) {
@@ -229,6 +318,7 @@
                                 Swal.fire("Success!", response.message, "success");
     
                                 $('#form-reservasi')[0].reset();
+                                $('#reservations-table').DataTable().draw(true);
                             },
                             error: function (error) {
                                 Swal.fire("Error!", error.responseJSON.message, "error");
@@ -241,4 +331,130 @@
             });
         });
     </script>    
+
+    {{-- Get Reservation Data --}}
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#reservations-table').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('reservation.data') }}",
+                columns: [
+                    {data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: true, searchable: false, width: '40px' },
+                    { data: 'reservation_date', name: 'reservation_date' },
+                    { data: 'cust_name', name: 'cust_name' },
+                    { data: 'contact', name: 'contact' },
+                    { data: 'number_guest', name: 'number_guest' },
+                    { data: 'special_request', name: 'special_request' },
+                    { data: 'remark', name: 'remark', orderable: false, searchable: false },
+                    { data: 'action', name: 'action', orderable: false, searchable: false },
+                ]
+            });
+        });
+    </script>
+    
+    {{-- Cancel Reservation --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            @if(session('scrollTo'))
+                $('html, body').animate({
+                    scrollTop: $("#{{ session('scrollTo') }}").offset().top
+                }, 1000);
+            @endif
+        });
+
+        @if(session('status'))
+            Swal.fire({
+                title: 'Success',
+                text: "{{ session('status') }}",
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
+        @endif
+
+        function confirmCancel(id) {
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Do you want to cancel this reservation?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, cancel it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: `{{ url('/reservation/cancel') }}/${id}`,
+                        type: 'POST',
+                        data: {
+                            _token: '{{ csrf_token() }}',
+                            _method: 'DELETE'
+                        },
+                        success: function(response) {
+                            Swal.fire("Success!", response.message, "success");
+                            $('#reservations-table').DataTable().ajax.reload();
+                        },
+                        error: function(error) {
+                            Swal.fire("Error!", error.responseJSON.message, "error");
+                        }
+                    });
+                }
+            });
+        }
+    </script>
+
+    {{-- Edit Reservation --}}
+    <script>
+        // Edit button click handler
+        function populateEditModal(id) { 
+            $.ajax({
+                url: '/reservation/edit/' + id,
+                type: 'GET',
+                success: function(response) {
+                    var reservation = response.reservation;
+
+                    // Populate data into modal fields
+                    $('#edit_reservation_id').val(reservation.id);
+                    $('#edit_cust_name').val(reservation.cust_name);
+                    $('#edit_contact').val(reservation.contact);
+                    $('#edit_reservation_date').val(reservation.reservation_date.replace(' ', 'T'));
+                    $('#edit_number_guest').val(reservation.number_guest);
+                    $('#edit_special_request').val(reservation.special_request);
+
+                    // Show edit modal
+                    $('#editReservationModal').modal('show');
+                },
+                error: function(error) {
+                    console.log(error);
+                    Swal.fire("Error!", "Failed to fetch reservation data.", "error");
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            // Submit edit form handler
+            $('#editReservationForm').submit(function(e) {
+                e.preventDefault();
+
+                var reservationId = $('#edit_reservation_id').val(); 
+                $.ajax({
+                    url: '/reservation/update/' + reservationId,
+                    type: 'PUT', // Gunakan metode PUT karena Anda menggunakan Laravel
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        Swal.fire("Success!", response.message, "success");
+                        $('#editReservationModal').modal('hide');
+                        $('#reservations-table').DataTable().draw(false);
+                    },
+                    error: function(error) {
+                        console.log(error);
+                        Swal.fire("Error!", error.responseJSON.message, "error");
+                    }
+                });
+            });
+        });
+
+    </script>
+    
 @stop

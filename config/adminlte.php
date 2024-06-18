@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => '2 Resto',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -63,8 +63,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>Two</b>Resto',
+    'logo_img' =>  '/frontend/img/icon-aresto.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -312,34 +312,25 @@ return [
             'can'  => 'manage-blog',
         ],
         [
-            'text'        => 'product',
-            'url'         => 'categories',
-            'icon'        => 'far fa-fw fa-file',
-        ],
-        [
             'text'        => 'Category',
             'url'         => 'categorydetails',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fa-edit',
         ],
         [
-            'text'        => 'reservation ',
-            'url'         => 'members',
-            'icon'        => 'far fa-fw fa-file',
+            'text'        => 'Reservations ',
+            'url'         => 'admin/reservations-admin',
+            'icon'        => 'far fa-fw fa-calendar-alt',
         ],
         [
-            'text'        => 'employees ',
+            'text'        => 'Menus ',
             'url'         => 'menus',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fa-clipboard',
         ],
         [
-            'text'        => 'customer',
+            'text'        => 'Orders',
             'url'         => 'orders',
-            'icon'        => 'far fa-fw fa-file',
+            'icon'        => 'far fa-fw fa-bell',
         ],
-        
-
-        
-     
     ],
 
     /*

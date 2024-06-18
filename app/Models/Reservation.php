@@ -15,5 +15,6 @@ class Reservation extends Model
         'reservation_date',
         'number_guest',
         'special_request',
+        'user_id',
     ];
 }
