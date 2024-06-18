@@ -70,6 +70,7 @@
             });
 
         </script>
+        <div class="container-xxl py-5 bg-dark hero-header mb-5"></div>
 
         <!-- Navbar & Hero End -->
 
@@ -423,7 +424,7 @@
                                                 <span class="text-primary">150k</span>
                                             </h5>
                                             <small class="fst-italic"></small> Mangkuk besar berisi nasi atau quinoa,
-                                            sayuran panggang, kacang-kacangan, dan saus tahini.
+                                            sayuran panggang, kacang-kacangan, dan saus tahini.
                                         </div>
                                     </div>
                                 </div>
