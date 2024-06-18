@@ -9,6 +9,8 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="{{asset('adminlte/plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{asset('adminlte/dist/css/adminlte.min.css')}}">
@@ -157,11 +159,16 @@
 </head>
 
 <body>
+    
     <div class="login-container">
+        <a href="{{ url('/') }}" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
         <div class="login-box">
             <div class="card card-outline card-primary">
                 <div class="card-header text-center">
-                    <a href="" class="h1"><b>Login</b></a>
+                    
+                    <a href="" class="h1" style="margin-left:50px;"><b>Login</b></a>
                 </div>
                 <div class="card-body">
 
@@ -171,7 +178,7 @@
                             <input type="email" name="email" class="form-control" placeholder="Email" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -179,7 +186,7 @@
                             <input type="password" name="password" class="form-control" placeholder="Password" required>
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-lock"></span>
+                                    
                                 </div>
                             </div>
                         </div>
