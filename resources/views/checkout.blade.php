@@ -57,7 +57,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Submit</button>
                             @if (session('success'))
-                                <div class="alert alert-success">
+                                <div class="alert alert-success" style="margin-top: 10px;">
                                     {{ session('success') }}
                                 </div>
                             @endif
