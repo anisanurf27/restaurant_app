@@ -46,18 +46,6 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('products.index') ? 'active' : '' }}"
-                    href="{{ route('products.index') }}">Products</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {{ request()->routeIs('cart.index') ? 'active' : '' }}"
-                    href="{{ route('cart.index') }}">Info Pesanan</a>
-            </li>
-        </ul>
-    </div>
     @yield('content')
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
