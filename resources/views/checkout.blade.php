@@ -17,11 +17,6 @@
                 <a href="{{ route('cart.index') }}" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Back</a>
             </div>
         </div>
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
@@ -61,6 +56,11 @@
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
                         </form>
                     </div>
                 </div>

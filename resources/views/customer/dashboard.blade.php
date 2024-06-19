@@ -495,23 +495,13 @@
                     </div>
                 </div>
                 <button class="material-symbols-outlined"
-                    style="background-color:orange; color:white; border-color:orange"
+                    style="background-color:orange; color:white; border-color:orange; width:100%; margin-top:15px"
                     onclick="window.location='{{ route('products.index') }}'">
                     shopping_cart_checkout
                 </button>
             </div>
         </div>
         <!-- Menu End -->
-
-
-        <!-- Team Start -->
-
-        <!-- Team End -->
-
-
-        <!-- Testimonial Start -->
-
-        <!-- Testimonial End -->
 
         <div class="container-xxl py-5" id="contact">
             <div class="container">
@@ -549,25 +539,29 @@
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Your Name">
                                             <label for="name">Nama Lengkap</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="contact_info" name="contact_info" placeholder="Your Email or Phone Number">
+                                            <input type="text" class="form-control" id="contact_info"
+                                                name="contact_info" placeholder="Your Email or Phone Number">
                                             <label for="contact_info">Email atau Nomor HP</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                            <input type="text" class="form-control" id="subject" name="subject"
+                                                placeholder="Subject">
                                             <label for="subject">Subject</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 150px"></textarea>
+                                            <textarea class="form-control" placeholder="Leave a message here"
+                                                id="message" name="message" style="height: 150px"></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
@@ -576,9 +570,9 @@
                                     </div>
                                 </div>
                             </form>
-                            
-                            
-                            
+
+
+
                         </div>
                     </div>
                 </div>
