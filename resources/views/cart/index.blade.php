@@ -126,7 +126,7 @@
                             Checkout</a>
                     </div>
                 </div>
-                @endsection <form action="{{ route('cart.destroy', $cartItem->id) }}" method="POST">
+                <form action="{{ route('cart.destroy', $cartItem->id) }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
