@@ -57,7 +57,7 @@
                                 <select class="form-control" id="payment_method" name="payment_method" required>
                                     <option value="credit_card">Credit Card</option>
                                     <option value="virtual_acount">Virtual Acount</option>
-                                    <option value="bank_transfer">Bank Transfer</option>
+                                    <option value="bank_transfer">Cash</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Submit</button>
