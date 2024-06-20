@@ -63,7 +63,40 @@
         border-bottom: 1px solid #ddd;
         /* Add bottom border for each row */
     }
+
+    .alert {
+        position: relative;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+        border-radius: 0.25rem;
+    }
+
+    .alert-success {
+        color: #155724;
+        background-color: #d4edda;
+        border-color: #c3e6cb;
+    }
+
+    .alert-success .close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        color: inherit;
+    }
+
+    .btn-selesai {
+        background-color: #007bff;
+        /* Blue button */
+        color: #fff;
+        /* White text */
+    }
+
 </style>
+<!-- Include Toastr.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
 @stop
 
 @section('content')
@@ -73,6 +106,18 @@
             <h3>Daftar Order</h3>
         </div>
         <div class="card-body">
+            @if(session('success'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Order updated successfully!</strong> {{ session('success') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <script>
+                    // Menampilkan notifikasi menggunakan Toastr.js
+                    toastr.success("Order updated successfully!", 'Success');
+                </script>
+            @endif
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -84,20 +129,30 @@
                         <th>Total Price</th>
                         <th>Payment Method</th>
                         <th>Created At</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($orders as $order)
-                        <tr>
-                            <td>{{ $order->id }}</td>
-                            <td>{{ $order->name }}</td>
-                            <td>{{ $order->address }}</td>
-                            <td>{{ $order->email }}</td>
-                            <td>{{ $order->phone }}</td>
-                            <td>{{ $order->total_price }}</td>
-                            <td>{{ $order->payment_method }}</td>
-                            <td>{{ $order->created_at }}</td>
-                        </tr>
+                    <tr>
+                        <td>{{ $order->id }}</td>
+                        <td>{{ $order->name }}</td>
+                        <td>{{ $order->address }}</td>
+                        <td>{{ $order->email }}</td>
+                        <td>{{ $order->phone }}</td>
+                        <td>{{ $order->total_price }}</td>
+                        <td>{{ $order->payment_method }}</td>
+                        <td>{{ $order->created_at }}</td>
+                        <td>
+                            <a href="{{ route('orders.edit', $order->id) }}" class="btn btn-warning">Edit</a>
+                            <form id="delete-form-`{{ $order->id }}`" action="{{ route('orders.destroy', $order->id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="button" class="btn btn-danger" onclick="confirmDelete(`{{ $order->id }}`)">Delete</button>
+                            </form>
+                            <button type="button" class="btn btn-selesai" onclick="moveToReport(`{{ $order->id }}`)">Selesai</button>
+                        </td>
+                    </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -111,5 +166,48 @@
 @stop
 
 @section('js')
-<script> console.log('Hi!');</script>
+<script>
+    // Function untuk konfirmasi penghapusan
+    function confirmDelete(orderId) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Submit form penghapusan jika konfirmasi diterima
+                document.getElementById('delete-form-' + orderId).submit();
+            }
+        });
+    }
+
+    // Function untuk memindahkan order ke laporan
+    function moveToReport(orderId) {
+        Swal.fire({
+            title: 'Move Order to Report?',
+            text: "This action will move the order to the report.",
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#007bff',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, move it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Kirim permintaan AJAX untuk memindahkan order
+                axios.post('/orders/move-to-report/' + orderId)
+                    .then(function (response) {
+                        toastr.success('Order moved to report successfully!', 'Success');
+                        // Lakukan sesuatu setelah berhasil dipindahkan
+                    })
+                    .catch(function (error) {
+                        console.error('Error:', error);
+                    });
+            }
+        });
+    }
+</script>
 @stop

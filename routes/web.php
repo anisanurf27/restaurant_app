@@ -20,6 +20,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Order1Controller;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\OrderAdminController;
 
 
 
@@ -50,7 +51,7 @@ Route::resource('categories', CategoryController::class);
 Route::resource('categorydetails', CategoryDetailController::class);
 Route::resource('members', MemberController::class);
 Route::resource('menus', MenuController::class);
-Route::resource('orders', OrderController::class);
+// Route::resource('orders', OrderController::class);
 Route::resource('orderdetails', OrderDetailController::class);
 
 Route::resource('reservations', ReservationController::class);
@@ -101,3 +102,12 @@ Route::get('/pelanggan', function () {
 
 //contact
 Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');
+
+// order
+Route::get('/orders', [Order1Controller::class, 'index'])->name('admin.order');
+Route::get('/orders/{id}/edit', [Order1Controller::class, 'edit'])->name('orders.edit');
+Route::post('/orders/{id}', [Order1Controller::class, 'update'])->name('orders.update');
+Route::delete('/orders/{id}', [Order1Controller::class, 'destroy'])->name('orders.destroy');
+Route::post('/orders/move-to-report/{id}', [Order1Controller::class, 'moveToReport'])->name('orders.move-to-report');
+
+
