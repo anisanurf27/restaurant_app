@@ -18,12 +18,10 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255',
-            'password' => 'nullable|string|min:8',
-            'location' => 'nullable|string|max:255',
-            'phone' => 'nullable|string|max:20',
             'profile_picture' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -34,12 +32,6 @@ class ProfileController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->location = $request->location;
-        $user->phone = $request->phone;
-
-        if ($request->password) {
-            $user->password = bcrypt($request->password);
-        }
 
         if ($request->hasFile('profile_picture')) {
             $imageName = time() . '.' . $request->profile_picture->extension();

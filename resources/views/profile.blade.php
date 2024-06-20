@@ -1,4 +1,3 @@
-@extends('layouts/layout_welcome')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -98,11 +97,11 @@
             </div>
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" value="{{ $user->name }}" required readonly>
+                <input type="text" id="name" name="name" value="{{ $user->name }}" required>
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" value="{{ $user->email }}" required readonly>
+                <input type="email" id="email" name="email" value="{{ $user->email }}" required>
             </div>
             <div class="form-group">
                 <label for="profile_picture">Change Profile Picture</label>
