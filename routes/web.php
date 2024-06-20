@@ -46,8 +46,10 @@ Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])-
 
 Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
 Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
-
+//category
 Route::resource('categories', CategoryController::class);
+
+
 Route::resource('categorydetails', CategoryDetailController::class);
 Route::resource('members', MemberController::class);
 Route::resource('menus', MenuController::class);
