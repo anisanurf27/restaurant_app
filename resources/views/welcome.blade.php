@@ -315,10 +315,11 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
                     <a class="btn btn-link" href="#about">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
                     <a class="btn btn-link" href="{{ route('reservation') }}">Reservation</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link"
+                        href="https://www.google.com/intl/id/policies/privacy/archive/20160325/">Privacy Policy</a>
+                    <a class="btn btn-link" href="https://www.gordonramsayrestaurants.com/terms-and-conditions/">Terms &
+                        Condition</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
