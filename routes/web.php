@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Order1Controller;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 
 
@@ -98,6 +99,9 @@ Route::get('/pelanggan', function () {
     return view('customer.dashboard');
 })->name('dashboard');
 
+//profile
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
 //contact
 Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');

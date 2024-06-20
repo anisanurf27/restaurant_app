@@ -28,7 +28,8 @@
                             <i class="fa fa-user"></i> User
                         </a>
                         <div class="dropdown-menu m-0">
-                            <a href="#" class="dropdown-item"><i class="fa fa-user"></i> Profile</a>
+                            <a href="{{ route('profile.show') }}" class="dropdown-item"><i class="fa fa-user"></i>
+                                Profile</a>
                             <a href="#" class="dropdown-item"><i class="fa fa-shopping-cart"></i> Orders</a>
                             <div class="dropdown-divider"></div>
                             <a href="{{ route('login.post') }}" class="dropdown-item" id="logout-button">
