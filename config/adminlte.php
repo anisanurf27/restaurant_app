@@ -313,6 +313,11 @@ return [
         ],
         [
             'text'        => 'Category',
+            'url'         => 'categories',
+            'icon'        => 'far fa-fw fa-file',
+        ],
+        [
+            'text'        => 'Category Details',
             'url'         => 'categorydetails',
             'icon'        => 'far fa-fw fa-edit',
         ],
