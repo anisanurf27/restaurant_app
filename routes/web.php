@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\Order1Controller;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\OrderAdminController;
 
@@ -46,8 +47,10 @@ Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])-
 
 Route::get('/auth/{provider}', [SocialiteController::class, 'redirectToProvider']);
 Route::get('/auth/{provider}/callback', [SocialiteController::class, 'handleProvideCallback']);
-
+//category
 Route::resource('categories', CategoryController::class);
+
+
 Route::resource('categorydetails', CategoryDetailController::class);
 Route::resource('members', MemberController::class);
 Route::resource('menus', MenuController::class);
@@ -99,6 +102,9 @@ Route::get('/pelanggan', function () {
     return view('customer.dashboard');
 })->name('dashboard');
 
+//profile
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+Route::post('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
 //contact
 Route::post('/send-message', [ContactController::class, 'sendMessage'])->name('send.message');

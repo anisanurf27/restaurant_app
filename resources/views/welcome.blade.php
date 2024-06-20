@@ -194,9 +194,12 @@
                         <h5 class="mb-0">Arnold Poernomo</h5>
                         <small>Chef</small>
                         <div class="d-flex justify-content-center mt-3">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.facebook.com/share/UNud5C63STDzJaf5/?mibextid=qi2Omg"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.instagram.com/arnoldpo?igsh=MTV2NzdxNmpqbHJ2cw=="><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -208,9 +211,12 @@
                         <h5 class="mb-0">Maria Irene Susanto</h5>
                         <small>Chef</small>
                         <div class="d-flex justify-content-center mt-3">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.facebook.com/mariairene.susanto.5?mibextid=ZbWKwL"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.instagram.com/rinrinmarinka?igsh=eDJ5ajY2bHRlZjM="><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -222,9 +228,12 @@
                         <h5 class="mb-0">Puti Renatta R. M.</h5>
                         <small>Chef</small>
                         <div class="d-flex justify-content-center mt-3">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.facebook.com/profile.php?id=61553113400166&mibextid=ZbWKwL"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.instagram.com/renattamoeloek?igsh=MWc1OWs3ZDdoOGR1eg=="><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -236,9 +245,12 @@
                         <h5 class="mb-0">Junior John Rorimpandey</h5>
                         <small>Chef</small>
                         <div class="d-flex justify-content-center mt-3">
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.facebook.com/juniorjhon.rorimpandey?mibextid=ZbWKwL"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-primary mx-1"
+                                href="https://www.instagram.com/junarorimpandeyofficial?igsh=cWZkczU0bjBwMHM0"><i
+                                    class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -315,21 +327,23 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Company</h4>
                     <a class="btn btn-link" href="#about">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
                     <a class="btn btn-link" href="{{ route('reservation') }}">Reservation</a>
-                    <a class="btn btn-link" href="">Privacy Policy</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link"
+                        href="https://www.google.com/intl/id/policies/privacy/archive/20160325/">Privacy Policy</a>
+                    <a class="btn btn-link" href="https://www.gordonramsayrestaurants.com/terms-and-conditions/">Terms &
+                        Condition</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="section-title ff-secondary text-start text-primary fw-normal mb-4">Contact</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Bandung, Indonesia</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, Bandung, Jawa Barat, Indonesia
+                    </p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 8213 2151 4496</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>restokelompok@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -355,14 +369,14 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Gamelab.id</a>,
+                        &copy; <a class="border-bottom" href="#">Gamelab.id</a>
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FQAs</a>
+                            <a>Home</a>
+                            <a>Cookies</a>
+                            <a>Help</a>
+                            <a>FQAs</a>
                         </div>
                     </div>
                 </div>
