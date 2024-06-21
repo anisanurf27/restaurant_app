@@ -84,7 +84,7 @@ class ReservationController extends Controller
                 } elseif ($row->approval_by_admin == 2) {
                     return '<span class="badge bg-danger bg-opacity-20 p-2">Rejected</span>';
                 } elseif ($row->approval_by_admin == 3) {
-                    return '<span class="badge bg-danger bg-opacity-20 p-2">Canceled</span>';
+                    return '<span class="badge bg-info bg-opacity-20 p-2">Canceled</span>';
                 } else {
                     return ''; // Handle other cases if necessary
                 }
