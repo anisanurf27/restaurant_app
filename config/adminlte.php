@@ -316,11 +316,11 @@ return [
             'url'         => 'categories',
             'icon'        => 'far fa-fw fa-file',
         ],
-        [
-            'text'        => 'Category Details',
-            'url'         => 'categorydetails',
-            'icon'        => 'far fa-fw fa-edit',
-        ],
+        // [
+        //     'text'        => 'Category Details',
+        //     'url'         => 'categorydetails',
+        //     'icon'        => 'far fa-fw fa-edit',
+        // ],
         [
             'text'        => 'Reservations ',
             'url'         => 'admin/reservations-admin',
