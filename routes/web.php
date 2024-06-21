@@ -115,5 +115,5 @@ Route::get('/orders/{id}/edit', [Order1Controller::class, 'edit'])->name('orders
 Route::post('/orders/{id}', [Order1Controller::class, 'update'])->name('orders.update');
 Route::delete('/orders/{id}', [Order1Controller::class, 'destroy'])->name('orders.destroy');
 Route::post('/orders/move-to-report/{id}', [Order1Controller::class, 'moveToReport'])->name('orders.move-to-report');
-
+Route::get('/report', [Order1Controller::class, 'report'])->name('report');
 

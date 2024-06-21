@@ -103,4 +103,10 @@ class Order1Controller extends Controller
     return redirect()->route('dashboard')->with('success', 'Order moved to report successfully!');
 }
 
+public function report()
+{
+    $orders = Order1::all(); // Fetch all orders from order1s table
+    return view('order.report', compact('orders')); // Pass the data to the view
+}
+
 }
